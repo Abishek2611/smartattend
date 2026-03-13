@@ -28,7 +28,7 @@ export default function AdminLeavesPage() {
   }
 
   const filtered = leaves.filter(l =>
-    `${l.employee_name} ${l.leave_type}`.toLowerCase().includes(search.toLowerCase())
+    `${l.employee_name} ${l.leave_type_name}`.toLowerCase().includes(search.toLowerCase())
   )
 
   const formatDate = d => d ? new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : '—'
@@ -102,7 +102,7 @@ export default function AdminLeavesPage() {
                           </div>
                         </div>
                       </td>
-                      <td><span className="badge badge-info">{l.leave_type}</span></td>
+                      <td><span className="badge badge-info">{l.leave_type_name || l.leave_type}</span></td>
                       <td style={{ fontSize: '0.85rem' }}>{formatDate(l.start_date)}</td>
                       <td style={{ fontSize: '0.85rem' }}>{formatDate(l.end_date)}</td>
                       <td style={{ fontSize: '0.85rem' }}>{l.total_days || 1}d</td>
@@ -149,7 +149,7 @@ export default function AdminLeavesPage() {
                     </div>
                     <div>
                       <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{l.employee_name}</div>
-                      <span className="badge badge-info" style={{ marginTop: 2 }}>{l.leave_type}</span>
+                      <span className="badge badge-info" style={{ marginTop: 2 }}>{l.leave_type_name || l.leave_type}</span>
                     </div>
                   </div>
                   <span className={`badge ${l.status === 'approved' ? 'badge-success' : l.status === 'rejected' ? 'badge-danger' : 'badge-warning'}`}>
