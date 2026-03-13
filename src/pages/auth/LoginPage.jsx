@@ -184,32 +184,7 @@ export default function LoginPage() {
             </button>
           </form>
 
-          {/* Demo Credentials */}
-          <div style={{
-            marginTop: 28,
-            padding: '16px',
-            background: 'var(--bg-card)',
-            border: '1px solid var(--border)',
-            borderRadius: 12,
-          }}>
-            <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              Demo Credentials
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-              <div style={{ fontSize: '0.82rem' }}>
-                <span style={{ color: 'var(--text-muted)' }}>Admin: </span>
-                <span style={{ color: 'var(--accent)' }}>admin@company.com</span>
-                <span style={{ color: 'var(--text-muted)' }}> / </span>
-                <span>admin123</span>
-              </div>
-              <div style={{ fontSize: '0.82rem' }}>
-                <span style={{ color: 'var(--text-muted)' }}>Employee: </span>
-                <span style={{ color: 'var(--success)' }}>ravi@company.com</span>
-                <span style={{ color: 'var(--text-muted)' }}> / </span>
-                <span>emp123</span>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
 
