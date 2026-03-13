@@ -33,7 +33,10 @@ export default function AdminEmployeesPage() {
     e.preventDefault()
     setSaving(true)
     try {
-      await api.post('/auth/employees/', form)
+      await api.post('/auth/employees/', {
+    ...form,
+    confirm_password: form.password
+})
       setShowModal(false)
       setForm({ first_name: '', last_name: '', email: '', username: '', employee_id: '', phone: '', department: '', password: '', role: 'employee' })
       fetchData()
