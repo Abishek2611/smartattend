@@ -28,7 +28,7 @@ export default function AdminDashboard() {
   )
 
   const trend = stats?.weekly_trend || []
-  const deptStats = stats?.department_stats || []
+  const deptStats = stats?.department_summary || []
   const pendingLeaves = stats?.pending_leaves || []
 
   const pieData = [
