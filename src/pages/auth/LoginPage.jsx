@@ -183,8 +183,6 @@ export default function LoginPage() {
               ) : 'Sign In'}
             </button>
           </form>
-
-
         </div>
       </div>
 
